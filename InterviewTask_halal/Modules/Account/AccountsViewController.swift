@@ -67,8 +67,4 @@ class AccountsViewController: UIViewController {
     }
     
     // MARK: - Button Action
-    
-    @IBAction func tappedBackNavButton(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
 }

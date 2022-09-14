@@ -23,12 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func setRootViewController(){
+    func setRootViewController() {
+        
+        let initialController = NavigationController()
+        initialController.setRootWireframe(HomeWireframe())
+
+        //self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        self.window?.rootViewController = initialController
+        self.window?.makeKeyAndVisible()
+        UIView.transition(with: DELEGATE.window!, duration: 2, options: .transitionCrossDissolve, animations: nil, completion: nil)
+    }
+    
+    
+    func setRootViewControlle(){
         if let homeViewController = loadVCfromStoryBoard(name: K.StoryBoard.home, identifier: K.IdOf.homeViewController) as? HomeViewController{
             DELEGATE.window?.rootViewController = RootNavViewController(rootViewController: homeViewController)
             self.window?.makeKeyAndVisible()
             UIView.transition(with: DELEGATE.window!, duration: 2, options: .transitionCrossDissolve, animations: nil, completion: nil)
         }
-        
     }
 }

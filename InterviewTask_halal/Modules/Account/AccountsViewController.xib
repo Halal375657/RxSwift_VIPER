@@ -31,22 +31,6 @@
                                 <color key="titleColor" red="0.1621485949" green="0.32419550419999998" blue="0.48784172529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxV-qG-e3t">
-                            <rect key="frame" x="19" y="47" width="68" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="R0v-u6-XA1"/>
-                                <constraint firstAttribute="width" constant="68" id="ivo-Ju-eCU"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
-                            <color key="tintColor" red="0.1621485949" green="0.32419550419999998" blue="0.48784172529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title=" Back" image="chevron.backward" catalog="system">
-                                <color key="titleColor" red="0.16862745100000001" green="0.33744251730000002" blue="0.50711721180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="tappedBackNavButton:" destination="-1" eventType="touchUpInside" id="psh-nm-3W1"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwY-nr-n2A">
                             <rect key="frame" x="163.5" y="56" width="87" height="23"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
@@ -59,8 +43,6 @@
                         <constraint firstAttribute="bottom" secondItem="iwY-nr-n2A" secondAttribute="bottom" constant="13" id="BgX-bZ-ccs"/>
                         <constraint firstItem="iwY-nr-n2A" firstAttribute="width" secondItem="k13-gU-pev" secondAttribute="width" multiplier="0.210145" id="SON-gu-EAw"/>
                         <constraint firstItem="iwY-nr-n2A" firstAttribute="centerX" secondItem="k13-gU-pev" secondAttribute="centerX" id="SUP-64-WYt"/>
-                        <constraint firstItem="zxV-qG-e3t" firstAttribute="leading" secondItem="k13-gU-pev" secondAttribute="leading" constant="19" id="cyj-cg-KJ1"/>
-                        <constraint firstAttribute="bottom" secondItem="zxV-qG-e3t" secondAttribute="bottom" constant="5" id="eOp-ix-eQT"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c5b-9n-RUr">
@@ -83,7 +65,6 @@
         </view>
     </objects>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="lock" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

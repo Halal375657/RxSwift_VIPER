@@ -59,13 +59,9 @@ final class HomeViewController: UIViewController {
     func setupTableViewTap() {
         tableView.rx
             .modelSelected(Account.self)
-            .subscribe ({ [unowned self] (account) in
-                let index = self.presenter.accounts.value[self.tableView.indexPathForSelectedRow?.item ?? 0]
-                //self.showUser(index: index!)
-                
-                let vc = AccountsViewController.loadFromNib()
-                vc.account = index
-                self.navigationController?.pushViewController(vc, animated: true)
+            .subscribe ({ [unowned self] (_) in
+                let account = self.presenter.accounts.value[self.tableView.indexPathForSelectedRow?.item ?? 0]
+                self.showTransactions(account: account)
             }).disposed(by: disposeBag)
     }
 
@@ -76,5 +72,17 @@ extension HomeViewController: HomeViewInterface {
     func showAccounts() {
         self.tableView.reloadData()
     }
+    
+    func showTransactions(account: Account) {
+        presenter.showTransactionWith(account: account)
+    }
 }
+
+
+
+
+
+
+
+
 

@@ -22,7 +22,7 @@ protocol HomePresenterInterface: PresenterInterface {
     var accounts: BehaviorRelay<[Account]> { get }
     
     func showAccounts()
-    //func showUserWith(index: Int)
+    func showTransactionWith(account: Account)
 }
 
 protocol HomeInteractorInterface: InteractorInterface {

@@ -12,11 +12,11 @@ import RxDataSources
 
 class AccountsViewController: UIViewController {
     
-    // MARK: - Class properties
+    // MARK: - Public properties
+    var presenter: AccountsPresenterInterface!
     
     @IBOutlet weak var tableView: UITableView!
     
-    private let apiCalling = APICalling1()
     private let disposeBag = DisposeBag()
     private var dataSource : RxTableViewSectionedReloadDataSource<AccountCellModel>!
     public var account: Account?
@@ -25,8 +25,10 @@ class AccountsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.showTransactions()
         configureTableView()
         bindTableViewDataSource()
+        
     }
 
     // MARK: Private
@@ -38,21 +40,21 @@ class AccountsViewController: UIViewController {
     
     fileprivate func bindTableViewDataSource() {
         dataSource = getDataSource()
-        let request = APIRequest(urlString: account?.transactions ?? "")
-        let result : Observable<[AccountCellModel]> = self.apiCalling.send(apiRequest: request)
-        // Bind items to section table view
-        result
+        presenter
+        .transactions?
         .bind(to: tableView.rx.items(dataSource: self.dataSource))
         .disposed(by: disposeBag)
     }
     
-    fileprivate func getDataSource() -> RxTableViewSectionedReloadDataSource<AccountCellModel> {
+    // MARK: - Button Action
+    
+    fileprivate func getDataSource() -> RxTableViewSectionedReloadDataSource<AccountCellModel>{
         return RxTableViewSectionedReloadDataSource<AccountCellModel>(
             configureCell: { ( dataSource, tableView, indexPath, item) in
                 
                 if indexPath.section == 0 {
                     let cell = tableView.dequeueReusableCell(withIdentifier: AccountTableViewCell.resuseIdentifier, for: indexPath) as! AccountTableViewCell
-                    cell.viewModel = self.account
+                    cell.viewModel = self.presenter.getAccount
                     return cell
                 }
                 
@@ -65,6 +67,13 @@ class AccountsViewController: UIViewController {
             }
         )
     }
-    
-    // MARK: - Button Action
 }
+
+// MARK: - Extensions -
+
+extension AccountsViewController: AccountsViewInterface {
+    func showTransactions() {
+        presenter.showTransactions()
+    }
+}
+

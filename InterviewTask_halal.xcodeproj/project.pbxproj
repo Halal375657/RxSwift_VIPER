@@ -25,6 +25,11 @@
 		8188705128D269D600CB668A /* VIPERError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188705028D269D600CB668A /* VIPERError.swift */; };
 		8188705328D26A6700CB668A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188705228D26A6700CB668A /* Constants.swift */; };
 		8188705628D279DD00CB668A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188705528D279DD00CB668A /* NavigationController.swift */; };
+		8188705828D28ACC00CB668A /* AccountsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188705728D28ACC00CB668A /* AccountsWireFrame.swift */; };
+		8188705A28D28BBF00CB668A /* AccountsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188705928D28BBF00CB668A /* AccountsInteractor.swift */; };
+		8188705C28D28BE600CB668A /* AccountsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188705B28D28BE600CB668A /* AccountsInterface.swift */; };
+		8188705E28D28BF600CB668A /* AccountsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188705D28D28BF600CB668A /* AccountsPresenter.swift */; };
+		8188706028D29C7600CB668A /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8188705F28D29C7600CB668A /* Account.storyboard */; };
 		81CD078C28D0F82D005A8C9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD078B28D0F82D005A8C9E /* AppDelegate.swift */; };
 		81CD079528D0F82F005A8C9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81CD079428D0F82F005A8C9E /* Assets.xcassets */; };
 		81CD07A328D0F82F005A8C9E /* InterviewTask_halalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07A228D0F82F005A8C9E /* InterviewTask_halalTests.swift */; };
@@ -35,7 +40,6 @@
 		81CD07C528D0FD27005A8C9E /* AccountsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07C428D0FD27005A8C9E /* AccountsModel.swift */; };
 		81CD07CA28D0FD37005A8C9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07C728D0FD37005A8C9E /* HomeViewController.swift */; };
 		81CD07CB28D0FD37005A8C9E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CD07C828D0FD37005A8C9E /* Home.storyboard */; };
-		81CD07CF28D0FD47005A8C9E /* AccountsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81CD07CD28D0FD47005A8C9E /* AccountsViewController.xib */; };
 		81CD07D028D0FD47005A8C9E /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07CE28D0FD47005A8C9E /* AccountsViewController.swift */; };
 		81CD07D228D0FD60005A8C9E /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07D128D0FD60005A8C9E /* AccountTableViewCell.swift */; };
 		81CD07D428D0FD6E005A8C9E /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81CD07D328D0FD6E005A8C9E /* AccountTableViewCell.xib */; };
@@ -95,6 +99,11 @@
 		8188705028D269D600CB668A /* VIPERError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERError.swift; sourceTree = "<group>"; };
 		8188705228D26A6700CB668A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8188705528D279DD00CB668A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		8188705728D28ACC00CB668A /* AccountsWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsWireFrame.swift; sourceTree = "<group>"; };
+		8188705928D28BBF00CB668A /* AccountsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsInteractor.swift; sourceTree = "<group>"; };
+		8188705B28D28BE600CB668A /* AccountsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsInterface.swift; sourceTree = "<group>"; };
+		8188705D28D28BF600CB668A /* AccountsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsPresenter.swift; sourceTree = "<group>"; };
+		8188705F28D29C7600CB668A /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		81CD078828D0F82D005A8C9E /* InterviewTask_halal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewTask_halal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CD078B28D0F82D005A8C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CD079428D0F82F005A8C9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,7 +118,6 @@
 		81CD07C428D0FD27005A8C9E /* AccountsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsModel.swift; sourceTree = "<group>"; };
 		81CD07C728D0FD37005A8C9E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		81CD07C928D0FD37005A8C9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
-		81CD07CD28D0FD47005A8C9E /* AccountsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountsViewController.xib; sourceTree = "<group>"; };
 		81CD07CE28D0FD47005A8C9E /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		81CD07D128D0FD60005A8C9E /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		81CD07D328D0FD6E005A8C9E /* AccountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
@@ -315,8 +323,12 @@
 		81CD07CC28D0FD47005A8C9E /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				81CD07CD28D0FD47005A8C9E /* AccountsViewController.xib */,
+				8188705F28D29C7600CB668A /* Account.storyboard */,
+				8188705928D28BBF00CB668A /* AccountsInteractor.swift */,
+				8188705B28D28BE600CB668A /* AccountsInterface.swift */,
+				8188705D28D28BF600CB668A /* AccountsPresenter.swift */,
 				81CD07CE28D0FD47005A8C9E /* AccountsViewController.swift */,
+				8188705728D28ACC00CB668A /* AccountsWireFrame.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -502,9 +514,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81CD07D428D0FD6E005A8C9E /* AccountTableViewCell.xib in Resources */,
-				81CD07CF28D0FD47005A8C9E /* AccountsViewController.xib in Resources */,
 				81CD07F228D125F6005A8C9E /* LaunchViewController.xib in Resources */,
 				81CD079528D0F82F005A8C9E /* Assets.xcassets in Resources */,
+				8188706028D29C7600CB668A /* Account.storyboard in Resources */,
 				81CD07CB28D0FD37005A8C9E /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,6 +659,9 @@
 				8188704F28D269A400CB668A /* BaseServices.swift in Sources */,
 				81CD07DE28D0FDA3005A8C9E /* RequestType.swift in Sources */,
 				8188705628D279DD00CB668A /* NavigationController.swift in Sources */,
+				8188705C28D28BE600CB668A /* AccountsInterface.swift in Sources */,
+				8188705A28D28BBF00CB668A /* AccountsInteractor.swift in Sources */,
+				8188705828D28ACC00CB668A /* AccountsWireFrame.swift in Sources */,
 				81CD07DD28D0FDA3005A8C9E /* APICalling.swift in Sources */,
 				8188704D28D2693600CB668A /* Services.swift in Sources */,
 				8188705128D269D600CB668A /* VIPERError.swift in Sources */,
@@ -664,6 +679,7 @@
 				81CD07DC28D0FDA3005A8C9E /* APIRequest.swift in Sources */,
 				81CD07F728D1F318005A8C9E /* Links.swift in Sources */,
 				8188704B28D267EC00CB668A /* APIServicesInterfaces.swift in Sources */,
+				8188705E28D28BF600CB668A /* AccountsPresenter.swift in Sources */,
 				81CD07D028D0FD47005A8C9E /* AccountsViewController.swift in Sources */,
 				81CD07D728D0FD90005A8C9E /* UIViewController+Loader.swift in Sources */,
 				81CD07EE28D1220C005A8C9E /* Constant.swift in Sources */,

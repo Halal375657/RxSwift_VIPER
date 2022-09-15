@@ -30,6 +30,10 @@ final class HomePresenter {
 // MARK: - Extensions -
 
 extension HomePresenter: HomePresenterInterface {
+    func showTransactionWith(account: Account) {
+        self.wireframe.willShow(account: account)
+    }
+    
     var accounts: BehaviorRelay<[Account]> {
         return privateAccounts
     }
@@ -39,10 +43,4 @@ extension HomePresenter: HomePresenterInterface {
             self.privateAccounts.accept(accounts.accounts ?? [])
         }).disposed(by: disposeBag)
     }
-    
-//    func showUserWith(index: Int) {
-//        self.interactor.getUserBy(id: index).drive(onNext: { (user) in
-//            self.wireframe.willShow(user: user)
-//        }).disposed(by: disposeBag)
-//    }
 }

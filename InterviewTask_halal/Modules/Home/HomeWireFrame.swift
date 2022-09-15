@@ -31,6 +31,6 @@ final class HomeWireframe: BaseWireframe<HomeViewController> {
 extension HomeWireframe: HomeWireframeInterface {
     func willShow(account: Account) {
         print("tapped the willShow method.")
-        //navigationController?.pushWireframe(AlbumsWireframe(user: user))
+        navigationController?.pushWireframe(AccountsWireframe(account: account))
     }
 }

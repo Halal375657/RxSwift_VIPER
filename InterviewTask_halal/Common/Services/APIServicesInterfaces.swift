@@ -13,10 +13,4 @@ import RxCocoa
 protocol APIServicesInterfaces {
     func getAccounts() -> Driver<Accounts>
     func getTransactions<T: Codable>(apiRequest: APIRequest) -> Observable<T>
-    
-//    func getUsersBy(id: Int) -> Driver<ServicesUser>
-//    func getAlbumsBy(user: Int) -> Driver<[Album]>
-//    func getAlbumBy(id: Int) -> Driver<Album>
-//    func getPhotosBy(album: Int) -> Driver<[Photo]>
-//	func downloadImageDataFrom(url: String) -> Driver<Data>
 }

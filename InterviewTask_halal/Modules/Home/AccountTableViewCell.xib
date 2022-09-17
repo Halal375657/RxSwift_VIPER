@@ -22,10 +22,20 @@
                     <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zn1-PD-Yuq" userLabel="containerView">
                         <rect key="frame" x="0.0" y="46.5" width="413" height="142.5"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAZ-iC-6kq">
+                                <rect key="frame" x="351" y="50" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="bfl-s6-V5k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.right" catalog="system"/>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FTh-As-zqv">
                                 <rect key="frame" x="44" y="8" width="87.5" height="126.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Visa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wde-7s-lk4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wde-7s-lk4">
                                         <rect key="frame" x="0.0" y="0.0" width="87.5" height="40"/>
                                         <color key="tintColor" systemColor="tintColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
@@ -42,7 +52,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="R0G-RF-0VA">
                                         <rect key="frame" x="0.0" y="70.5" width="87.5" height="25.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-VZ-X13">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-VZ-X13">
                                                 <rect key="frame" x="0.0" y="0.0" width="23.5" height="25.5"/>
                                                 <color key="tintColor" systemColor="tintColor"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
@@ -77,13 +87,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAZ-iC-6kq">
-                                <rect key="frame" x="339" y="26.5" width="54" height="89"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="chevron.right" catalog="system"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -96,12 +99,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="kAZ-iC-6kq" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.130751" id="0oL-ch-Ql1"/>
                     <constraint firstItem="Zn1-PD-Yuq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3zo-N7-xbH"/>
                     <constraint firstAttribute="trailing" secondItem="Zn1-PD-Yuq" secondAttribute="trailing" id="5Yy-ml-Jgw"/>
                     <constraint firstAttribute="bottom" secondItem="Zn1-PD-Yuq" secondAttribute="bottom" id="DHf-AJ-gxh"/>
                     <constraint firstAttribute="bottom" secondItem="hpf-q4-tMt" secondAttribute="bottom" id="Seg-iE-UgE"/>
-                    <constraint firstItem="kAZ-iC-6kq" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.470899" id="TVA-ty-kHj"/>
                     <constraint firstItem="hpf-q4-tMt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WHk-3k-5eI"/>
                     <constraint firstAttribute="trailing" secondItem="hpf-q4-tMt" secondAttribute="trailing" id="Zeq-Uc-a15"/>
                     <constraint firstItem="Zn1-PD-Yuq" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.754717" id="aoG-p0-cDL"/>

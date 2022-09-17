@@ -32,8 +32,8 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-pT-hEB">
-                                        <rect key="frame" x="163.5" y="57" width="87" height="23"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                        <rect key="frame" x="166" y="58.5" width="82" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -54,7 +54,6 @@
                                     <constraint firstAttribute="bottom" secondItem="1Fd-pT-hEB" secondAttribute="bottom" constant="12" id="4uS-di-7Ge"/>
                                     <constraint firstItem="8qR-ze-Lxt" firstAttribute="leading" secondItem="hkF-P2-lgM" secondAttribute="leading" constant="16" id="6fx-Rx-dIS"/>
                                     <constraint firstItem="1Fd-pT-hEB" firstAttribute="centerX" secondItem="hkF-P2-lgM" secondAttribute="centerX" id="C60-yv-zEx"/>
-                                    <constraint firstItem="1Fd-pT-hEB" firstAttribute="width" secondItem="hkF-P2-lgM" secondAttribute="width" multiplier="0.210145" id="Wod-fO-zHl"/>
                                     <constraint firstAttribute="trailing" secondItem="3Bd-Vb-172" secondAttribute="trailing" constant="16" id="pQs-kv-Ptn"/>
                                     <constraint firstAttribute="bottom" secondItem="3Bd-Vb-172" secondAttribute="bottom" constant="5" id="s28-lV-ebU"/>
                                     <constraint firstAttribute="bottom" secondItem="8qR-ze-Lxt" secondAttribute="bottom" constant="5" id="zT1-gt-vZH"/>

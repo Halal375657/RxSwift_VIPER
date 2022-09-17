@@ -19,9 +19,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYb-uG-ayF" userLabel="Navbar">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeC-yF-1w7" userLabel="lockNavBar">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeC-yF-1w7" userLabel="lockNavBar">
                                         <rect key="frame" x="353" y="43" width="44" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="5zt-ci-eHF"/>
+                                            <constraint firstAttribute="width" constant="44" id="BcO-gD-AHk"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" red="0.16862745100000001" green="0.33744251730000002" blue="0.50711721180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -30,7 +33,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGQ-l8-cwS">
-                                        <rect key="frame" x="163.5" y="56" width="87" height="23"/>
+                                        <rect key="frame" x="164" y="56" width="86" height="23"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,8 +41,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.81766241790000005" green="0.8176623583" blue="0.8176623583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FeC-yF-1w7" secondAttribute="trailing" constant="17" id="JqE-7M-HWi"/>
                                     <constraint firstAttribute="bottom" secondItem="ZGQ-l8-cwS" secondAttribute="bottom" constant="13" id="Za3-4w-NbT"/>
-                                    <constraint firstItem="ZGQ-l8-cwS" firstAttribute="width" secondItem="NYb-uG-ayF" secondAttribute="width" multiplier="0.210145" id="lec-B5-EtP"/>
+                                    <constraint firstAttribute="bottom" secondItem="FeC-yF-1w7" secondAttribute="bottom" constant="5" id="kX1-Rp-NBV"/>
                                     <constraint firstItem="ZGQ-l8-cwS" firstAttribute="centerX" secondItem="NYb-uG-ayF" secondAttribute="centerX" id="n1q-ST-dGg"/>
                                 </constraints>
                             </view>

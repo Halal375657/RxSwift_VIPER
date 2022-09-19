@@ -26,6 +26,23 @@ struct Transaction: Codable {
         case transactionDescription = "description"
         case amount
     }
+    
+    init(json: JSON) {
+        transactionID = json["transactionId"].stringValue
+        date = json["date"].stringValue.toDate()
+        cbTransactionTypeCode = json["cbTransactionTypeCode"].stringValue
+        transactionDescription = json["description"].stringValue
+        amount = json["amount"].stringValue
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        transactionID = try values.decodeIfPresent(String.self, forKey: .transactionID)
+        date = try values.decodeIfPresent(Date.self, forKey: .date)
+        cbTransactionTypeCode = try values.decodeIfPresent(String.self, forKey: .cbTransactionTypeCode)
+        transactionDescription = try values.decodeIfPresent(String.self, forKey: .transactionDescription)
+        amount = try values.decodeIfPresent(String.self, forKey: .amount)
+    }
 }
 
 

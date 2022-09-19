@@ -35,7 +35,7 @@ final class HomeViewController: UIViewController {
     // MARK: Private -
     
     private func setupTableView() {
-        tableView.register(UINib(nibName: "AccountTableViewCell", bundle: nil), forCellReuseIdentifier: AccountTableViewCell.resuseIdentifier)
+        tableView.register(UINib(nibName: Constants.Nib.accountTableViewCell, bundle: nil), forCellReuseIdentifier: AccountTableViewCell.resuseIdentifier)
         tableView.separatorStyle = .none
     }
     
@@ -56,6 +56,7 @@ final class HomeViewController: UIViewController {
         .disposed(by: disposeBag)
     }
     
+    /// present the `Transaction Listing` view controller according to tapped cell.
     func setupTableViewTap() {
         tableView.rx
             .modelSelected(Account.self)

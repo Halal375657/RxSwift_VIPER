@@ -36,7 +36,12 @@ extension HomeInteractor: HomeInteractorInterface {
     }
     
     func getAccounts() -> Driver<Accounts> {
-        return services.getAccounts()
+        return services
+            .getAccounts(
+                apiRequest: APIRequest(
+                    urlString: Constants.API.URLBase
+                )
+            )
     }
 
 }

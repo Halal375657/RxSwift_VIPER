@@ -12,9 +12,22 @@ import SwiftyJSON
 
 final class Services: BaseServices, APIServicesInterfaces {
     
-    func getAccounts() -> Driver<Accounts> {
-        let components = URLComponents(string: Constants.API.URLBase.appendingPathComponent("5abb1042350000580073a7ea").absoluteString)!
-        let urlRequest = URLRequest(url: components.url!)
+    /**
+     `Driver<Accounts>` can be considered a builder pattern for observable sequences that drive the application.
+     
+     If observable sequence has produced at least one element, after new subscription is made last produced element will be
+     immediately replayed on the same thread on which the subscription was made.
+     
+     When using `drive*`, `subscribe*` and `bind*` family of methods, they should always be called from main thread.
+     
+     If `drive*`, `subscribe*` and `bind*` are called from background thread, it is possible that initial replay
+     will happen on background thread, and subsequent events will arrive on main thread.
+     
+     - parameters:
+     - returns : `Driver<Accounts>` bulder pattern
+     */
+    func getAccounts(apiRequest: APIRequest) -> Driver<Accounts> {
+        let urlRequest = URLRequest(url: apiRequest.url)
         let result:Driver<Accounts> = remoteStream(urlRequest)
             .observe(on: ConcurrentDispatchQueueScheduler(qos: .background))
             .single()
@@ -23,7 +36,18 @@ final class Services: BaseServices, APIServicesInterfaces {
         return result
     }
     
+    
+    /**
+     The `Observable<T>` is represents a push style sequence.
+     
+     It is possible that events are sent from different threads, but no two events can be sent concurrently to
+     `observer`.
+     
+     - parameter apiRequest: `APIRequest` Type.
+     - returns `Observable<T>` sequence.
+     */
     func getTransactions<T: Codable>(apiRequest: APIRequest) -> Observable<T> {
+#warning("The `Transaction Listing` API response data should change a few things from the backend. Please make change the responsed data type. It's right now okay, I handle it manually. Although I can handle it using another approach - I could detect the `amount` data type using `decode` method by creating `enum`(string,integer) but I didn't it. because at this moment I'm not fully confindent on backend😀☺️. that's why I'm trying to stay in safe zone!")
         
         return Observable<T>.create { observar in
             let request = apiRequest.request(with: apiRequest.url)
@@ -32,24 +56,30 @@ final class Services: BaseServices, APIServicesInterfaces {
                 
                 guard let data = data else {observar.onError(error!); return }
                 
-                var dic = Dictionary(
-                    grouping: JSON(data)["transactions"]
-                        .compactMap { (_, transaction) in
-                    return transaction.getTransaction()
-                }) { (transaction) -> Date in
-                    return transaction.date!
-                }.sorted { $0.key < $1.key }
-                 .compactMap { (key: Date, value: [Transaction]) in
-                     AccountCellModel(
-                         header: key.toString(),
-                         items: value
-                     )
-                 }
+                /**
+                 The inner method function praparing the fetched data for load to `Transactions Listing` Table view.
+                 
+                 - returns: The prepared `AccountCellModel` array.
+                 */
+                func praparingTheTableViewData() -> Array<AccountCellModel>{
+                    /// table header view data - it's inserted in first of the table view data-source.
+                    let headerViewData = AccountCellModel(header: "", items: [Transaction(json: JSON())])
+                    return [headerViewData] + Dictionary(
+                        grouping: JSON(data)["transactions"]
+                            .compactMap { (_, transaction) in
+                                return Transaction(json: transaction)
+                            }) { (transaction) -> Date in
+                                return transaction.date!
+                            }.sorted { $0.key < $1.key }
+                        .compactMap { (key: Date, value: [Transaction]) in
+                            AccountCellModel(
+                                header: key.toString(),
+                                items: value
+                            )
+                        }
+                }
                 
-                /// for handle the table view header view.
-                dic.insert(AccountCellModel(header: "", items: [Transaction(transactionID: nil, date: nil, cbTransactionTypeCode: nil, transactionDescription: nil, amount: nil)]), at: 0)
-                
-                observar.onNext(dic as! T)
+                observar.onNext(praparingTheTableViewData() as! T)
                 observar.onCompleted()
             }
             task.resume()

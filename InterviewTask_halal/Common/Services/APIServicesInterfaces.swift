@@ -11,6 +11,6 @@ import RxSwift
 import RxCocoa
 
 protocol APIServicesInterfaces {
-    func getAccounts() -> Driver<Accounts>
+    func getAccounts(apiRequest: APIRequest) -> Driver<Accounts>
     func getTransactions<T: Codable>(apiRequest: APIRequest) -> Observable<T>
 }

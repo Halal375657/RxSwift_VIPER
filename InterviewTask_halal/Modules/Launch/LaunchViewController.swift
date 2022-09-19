@@ -17,6 +17,7 @@ class LaunchViewController: UIViewController {
         super.viewDidLoad()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            /// setup root view controller after presenting the lunching page.
             DELEGATE.setRootViewController()
         }
     }

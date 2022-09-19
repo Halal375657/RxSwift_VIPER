@@ -12,6 +12,13 @@ class APIRequest {
     var method = RequestType.GET
     var parameters = [String: String]()
     
+    /**
+     preparing the `URLRequest` accorting to give url.
+     
+     - parameters:
+      - baseURL: targeted url that type is `URL`.
+     - returns: Manipulated `URLRequest`
+     */
     func request(with baseURL: URL) -> URLRequest {
         var request = URLRequest(url: baseURL)
         request.httpMethod = method.rawValue
@@ -19,6 +26,7 @@ class APIRequest {
         return request
     }
     
+    /// - parameter urlString: `String` of the url
     init(urlString: String) {
         self.url = URL(string: urlString)!
     }

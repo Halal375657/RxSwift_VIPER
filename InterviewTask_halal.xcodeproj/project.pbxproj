@@ -48,7 +48,6 @@
 		81CD07DE28D0FDA3005A8C9E /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07DB28D0FDA3005A8C9E /* RequestType.swift */; };
 		81CD07E228D10E4D005A8C9E /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07E128D10E4D005A8C9E /* String+Date.swift */; };
 		81CD07E428D10E74005A8C9E /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07E328D10E74005A8C9E /* Date+String.swift */; };
-		81CD07E628D1170A005A8C9E /* JSON+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07E528D1170A005A8C9E /* JSON+Decode.swift */; };
 		81CD07E928D11FEF005A8C9E /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07E828D11FEF005A8C9E /* Define.swift */; };
 		81CD07EC28D121B4005A8C9E /* RootNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07EB28D121B4005A8C9E /* RootNavViewController.swift */; };
 		81CD07F128D125F6005A8C9E /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD07EF28D125F6005A8C9E /* LaunchViewController.swift */; };
@@ -123,7 +122,6 @@
 		81CD07DB28D0FDA3005A8C9E /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		81CD07E128D10E4D005A8C9E /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		81CD07E328D10E74005A8C9E /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
-		81CD07E528D1170A005A8C9E /* JSON+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Decode.swift"; sourceTree = "<group>"; };
 		81CD07E828D11FEF005A8C9E /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		81CD07EB28D121B4005A8C9E /* RootNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavViewController.swift; sourceTree = "<group>"; };
 		81CD07EF28D125F6005A8C9E /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -275,10 +273,10 @@
 		81CD07BE28D0FCA3005A8C9E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				81CD07EA28D12192005A8C9E /* Navigation */,
 				81CD07C628D0FD37005A8C9E /* Home */,
 				81CD07CC28D0FD47005A8C9E /* Account */,
 				81CD07F328D1294F005A8C9E /* Launch */,
+				81CD07EA28D12192005A8C9E /* Navigation */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -318,7 +316,6 @@
 				81CD07D628D0FD90005A8C9E /* UIViewController+Loader.swift */,
 				81CD07E128D10E4D005A8C9E /* String+Date.swift */,
 				81CD07E328D10E74005A8C9E /* Date+String.swift */,
-				81CD07E528D1170A005A8C9E /* JSON+Decode.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -632,7 +629,6 @@
 				8188704D28D2693600CB668A /* Services.swift in Sources */,
 				8188705128D269D600CB668A /* VIPERError.swift in Sources */,
 				8188703F28D2643200CB668A /* PresenterInterface.swift in Sources */,
-				81CD07E628D1170A005A8C9E /* JSON+Decode.swift in Sources */,
 				8188703E28D2643200CB668A /* UIStoryboardExtension.swift in Sources */,
 				81CD07C528D0FD27005A8C9E /* AccountsModel.swift in Sources */,
 				8188703D28D2643200CB668A /* FormatterInterface.swift in Sources */,

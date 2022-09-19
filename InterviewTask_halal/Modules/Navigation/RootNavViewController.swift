@@ -29,10 +29,11 @@ class HomeNavViewController: UINavigationController {
     override var prefersStatusBarHidden: Bool{
         return false
     }
-    //hello
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.isHidden = true

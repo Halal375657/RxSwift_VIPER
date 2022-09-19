@@ -10,8 +10,11 @@ import UIKit
 struct Constants {
 
     struct API {
-        //static let URLBase = URL(string: "https://jsonplaceholder.typicode.com")!
-        static let URLBase = URL(string: "http://www.mocky.io/v2")!
+        static let URLBase = "http://www.mocky.io/v2/5abb1042350000580073a7ea"
+    }
+    
+    struct Nib {
+        static let accountTableViewCell = "AccountTableViewCell"
     }
 
 }

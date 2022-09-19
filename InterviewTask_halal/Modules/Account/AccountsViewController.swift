@@ -12,30 +12,28 @@ import RxDataSources
 
 class AccountsViewController: UIViewController {
     
-    // MARK: - Public properties
+    // MARK: - Public properties -
     var presenter: AccountsPresenterInterface!
+    public var account: Account?
     
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Private properties -
     private let disposeBag = DisposeBag()
     private var dataSource : RxTableViewSectionedReloadDataSource<AccountCellModel>!
-    public var account: Account?
     
-    // MARK: - Life cycle
-    
+    // MARK: - Life cycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.showTransactions()
         configureTableView()
         bindTableViewDataSource()
-        
     }
 
-    // MARK: Private
-    
+    // MARK: Private -
     fileprivate func configureTableView() {
         tableView.register(TransactionDetailTableCell.self, forCellReuseIdentifier: TransactionDetailTableCell.reuseIdentifier)
-        tableView.register(UINib(nibName: "AccountTableViewCell", bundle: nil), forCellReuseIdentifier: AccountTableViewCell.resuseIdentifier)
+        tableView.register(UINib(nibName: Constants.Nib.accountTableViewCell, bundle: nil), forCellReuseIdentifier: AccountTableViewCell.resuseIdentifier)
     }
     
     fileprivate func bindTableViewDataSource() {
@@ -46,8 +44,7 @@ class AccountsViewController: UIViewController {
         .disposed(by: disposeBag)
     }
     
-    // MARK: - Button Action
-    
+    // MARK: - Button action -
     fileprivate func getDataSource() -> RxTableViewSectionedReloadDataSource<AccountCellModel>{
         return RxTableViewSectionedReloadDataSource<AccountCellModel>(
             configureCell: { ( dataSource, tableView, indexPath, item) in
